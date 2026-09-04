@@ -54,7 +54,7 @@ st.markdown("""
 st.markdown("""
 <div class="banner-control">
     <span class="traffic-lights">🟢 🟡 🔴</span>
-    <span class="banner-title">DASHBOARD TDG PDGV-2025-2-004 | ACERÍAS PAZ DEL RÍO</span>
+    <span class="banner-title">DASHBOARD ACTIVIDAD A3 TDG PDGV-2025-2-004 | ACERÍAS PAZ DEL RÍO</span>
     <div class="banner-sub">
         ESTRATEGIA PARA REDUCCIÓN DE PÉRDIDAS POR PARTÍCULA INTERMEDIA EN TRITURACIÓN (PLANTA BENEFICIO)
     </div>
