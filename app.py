@@ -56,7 +56,7 @@ st.markdown("""
     <span class="traffic-lights">🟢 🟡 🔴</span>
     <span class="banner-title">DASHBOARD ACTIVIDAD A3  | CASO DE ESTUDIO ACERÍAS PAZ DEL RÍO</span>
     <div class="banner-sub">
-        PRUEBA PRUEBA PRUEBA
+        PRESENTACIÓN DE RESULTADOS
     </div>
 </div>
 """, unsafe_allow_html=True)
