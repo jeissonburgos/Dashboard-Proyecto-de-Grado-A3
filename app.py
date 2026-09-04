@@ -17,7 +17,7 @@ GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 GAMMA_KEY = os.getenv("GAMMA_API_KEY", "").strip()
 
 st.set_page_config(
-    page_title="Dashboard TDG - Acerías Paz del Río",
+    page_title="Dashboard - Acerías Paz del Río",
     page_icon="🟢",
     layout="wide"
 )
