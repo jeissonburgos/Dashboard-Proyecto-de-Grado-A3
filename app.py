@@ -225,24 +225,48 @@ with tab_costos:
         )
         st.plotly_chart(fig_s, width="stretch")
 
-    with c_gauges:
-        st.markdown("**Eficiencia en Costos (CPI / IRC)**")
-        st_echarts(options={
-            "series": [{"type": "gauge", "startAngle": 180, "endAngle": 0, "min": 0.5, "max": 1.5,
-                        "axisLine": {"lineStyle": {"width": 11, "color": [[0.4, "#EF4444"], [0.5, "#F59E0B"], [1.0, "#10B981"]]}},
-                        "pointer": {"length": "60%", "width": 4},
-                        "detail": {"formatter": "{value}", "fontSize": 18, "offsetCenter": [0, "-20%"]},
-                        "data": [{"value": round(CPI, 2), "name": "CPI"}]}],
-        }, height="160px")
+with c_gauges:
+    st.markdown("**Eficiencia en Costos (CPI / IRC)**")
+    st_echarts(options={
+        "series": [{
+            "type": "gauge",
+            "startAngle": 180,
+            "endAngle": 0,
+            "min": 0.5,
+            "max": 1.5,
+            "radius": "95%",
+            "center": ["50%", "70%"],
+            "axisLine": {"lineStyle": {"width": 12, "color": [[0.4, "#EF4444"], [0.5, "#F59E0B"], [1.0, "#10B981"]]}},
+            "pointer": {"length": "55%", "width": 4, "itemStyle": {"color": "#1E293B"}},
+            "axisTick": {"show": False},
+            "splitLine": {"show": False},
+            "axisLabel": {"show": False},
+            "detail": {"formatter": "{value}", "fontSize": 20, "fontWeight": "bold", "offsetCenter": [0, "-20%"], "color": "#0F172A"},
+            "title": {"offsetCenter": [0, "20%"], "fontSize": 12, "color": "#64748B"},
+            "data": [{"value": round(CPI, 2), "name": "CPI"}]
+        }]
+    }, height="150px")
 
-        st.markdown("**Eficiencia en Plazo (SPI / IRP)**")
-        st_echarts(options={
-            "series": [{"type": "gauge", "startAngle": 180, "endAngle": 0, "min": 0.5, "max": 1.5,
-                        "axisLine": {"lineStyle": {"width": 11, "color": [[0.4, "#EF4444"], [0.5, "#F59E0B"], [1.0, "#10B981"]]}},
-                        "pointer": {"length": "60%", "width": 4},
-                        "detail": {"formatter": "{value}", "fontSize": 18, "offsetCenter": [0, "-20%"]},
-                        "data": [{"value": round(SPI, 2), "name": "SPI"}]}],
-        }, height="160px")
+    st.markdown("**Eficiencia en Plazo (SPI / IRP)**")
+    st_echarts(options={
+        "series": [{
+            "type": "gauge",
+            "startAngle": 180,
+            "endAngle": 0,
+            "min": 0.5,
+            "max": 1.5,
+            "radius": "95%",
+            "center": ["50%", "70%"],
+            "axisLine": {"lineStyle": {"width": 12, "color": [[0.4, "#EF4444"], [0.5, "#F59E0B"], [1.0, "#10B981"]]}},
+            "pointer": {"length": "55%", "width": 4, "itemStyle": {"color": "#1E293B"}},
+            "axisTick": {"show": False},
+            "splitLine": {"show": False},
+            "axisLabel": {"show": False},
+            "detail": {"formatter": "{value}", "fontSize": 20, "fontWeight": "bold", "offsetCenter": [0, "-20%"], "color": "#0F172A"},
+            "title": {"offsetCenter": [0, "20%"], "fontSize": 12, "color": "#64748B"},
+            "data": [{"value": round(SPI, 2), "name": "SPI"}]
+        }]
+    }, height="150px")
 
     # Índices en el tiempo y Regresión OLS
     col_t1, col_t2 = st.columns([1.5, 1])
